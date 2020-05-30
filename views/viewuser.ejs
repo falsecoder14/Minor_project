@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <h1>LIST OF CUSTOMERS!</h1>
+    <table id="customers">
+        <tr>
+            <th>USERNAME</th>
+            <th>E-MAIL ID</th>
+            <th>PHONE-NO</th>
+        </tr>
+        <% curuser.forEach(function(cur){ %>
+            <tr>
+                <td><%= cur.username %></td>
+                <td><%= cur.emailid %></td>
+                <td><%= cur.phoneno %></td>
+            </tr>  
+        <% }); %>
+    </table>
+    <br><br>
+</div>
+
+<%- include('partials/footer') %>
